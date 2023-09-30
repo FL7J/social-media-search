@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Graping</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom CSS styles if needed -->
+    <style>
+        /* Add your custom CSS styles here */
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .search-box {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- Open-source logo icon (replace with your preferred icon) -->
+        <div class="logo">
+            <i class="fas fa-code"></i> <!-- Replace with your icon class or image -->
+        </div>
+        <!-- Name -->
+        <h1>Social Graping</h1>
+    </div>
+
+    <div class="container">
+        <div class="search-box">
+            <form id="searchForm" onsubmit="storeSearchResult(event)">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p> Powerd py: FL7, ABOOD</p>
+        <!-- Add more contact information or content as needed -->
+    </div>
+
+    <!-- Add Bootstrap JS and other scripts here if needed -->
+    <!-- Example: <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+
+    <script>
+        // Function to store search result in local storage and redirect
+        function storeSearchResult(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the search input value
+            const searchValue = document.getElementById("searchInput").value;
+
+            // Store the search result in local storage
+            localStorage.setItem("searchResult", searchValue);
+
+            // Redirect the user to main.html
+            window.location.href = "main.html";
+        }
+    </script>
+</body>
+</html>
